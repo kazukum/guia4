@@ -1,0 +1,27 @@
+
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Articulos" %>
+
+
+
+<div class="container text-center">
+<div id="articulos" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+ 
+
+  <div class="card-header"><h1>Articulos</h1></div>
+  <div class="card-body bg-light">
+   <% @articulos.each do |articulo| %>
+    <%= render articulo %>
+    <p>
+      <%= link_to "Show this articulo", articulo %>
+      
+    </p>
+
+    
+   <% end %>
+
+   <%= link_to "Nuevo Articulo", new_articulo_path %>
+  </div>
+</div>
+</div>
